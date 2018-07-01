@@ -1,0 +1,28 @@
+Cmd For Run Wrk In Docker:
+
+start docker using this cmd: 
+	 sudo docker start 766d3ba8bb6d
+
+execute docker through this cmd : 
+	sudo docker exec -t  766d3ba8bb6d bash
+
+used to check get calls:
+	curl -XGET  "http://localhost:3000/users/all"
+
+used to install wrk:
+	 sudo docker pull skandyla/wrk
+
+used to run wrk:
+	sudo docker run --rm skandyla/wrk
+
+use to show container:
+	 sudo docker ps -a
+
+sudo docker run -it --rm  --entrypoint=/bin/sh skandyla/wrk
+
+used to run wrk:
+	sudo docker run --rm skandyla/wrk   -c 10 -t 10  "http://192.168.43.200:3000/users/all"
+
+for remove:
+sudo docker rm  766d3ba8bb6d 
+
